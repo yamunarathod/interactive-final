@@ -1,0 +1,27 @@
+<div class="h-screen  flex justify-center  flex-col items-center text-white">
+
+  <form #inputForm="ngForm" class="w-1/2 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div class="mb-4">
+      <img src="../assets/brandlogo.png" alt="">
+    </div>
+    <div class="mb-4">
+      <div class="text-white text-2xl pb-10 pt-10 font-sans font-bold gap-12">Feedback Form - {{experienceName}} </div>
+<!--
+      <div class="text-white">{{inputForm.value | json}}</div> -->
+      <label class="block text-white text-sm font-bold mb-2" for="Name">
+        Name
+      </label>
+      <input name="name" ngModel class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Name">
+    </div>
+    <div class="flex items-center justify-between">
+      <button (click)="submit(inputForm.value)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+        Next
+      </button>
+    </div>
+  </form>
+
+
+
+</div>
+
+

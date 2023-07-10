@@ -1,0 +1,7 @@
+<router-outlet></router-outlet>
+<!-- <video #videoPlayer [src]="videoSource" (ended)="playNextVideo()" autoplay></video>
+<button (click)="playNextVideo()">Next Video</button> -->
+<video #videoPlayer [src]="getVideoSource()" (ended)="playNextVideo()" [autoplay]="defaultVideoPlaying"></video>
+<div>
+  <button *ngFor="let video of videoList" (click)="playSelectedVideo(video.src)">{{ video.title }}</button>
+</div>

@@ -1,0 +1,577 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "cft-inf-awd": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/cft-inf-awd",
+      "sourceRoot": "projects/cft-inf-awd/src",
+      "prefix": "cft-prj",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/cft-inf-awd",
+            "index": "projects/cft-inf-awd/src/index.html",
+            "main": "projects/cft-inf-awd/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/cft-inf-awd/tsconfig.app.json",
+            "assets": [
+              "projects/cft-inf-awd/src/favicon.ico",
+              "projects/cft-inf-awd/src/assets"
+            ],
+            "styles": [
+              "projects/cft-inf-awd/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "cft-inf-awd:build:production"
+            },
+            "development": {
+              "browserTarget": "cft-inf-awd:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "cft-inf-awd:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/cft-inf-awd/tsconfig.spec.json",
+            "assets": [
+              "projects/cft-inf-awd/src/favicon.ico",
+              "projects/cft-inf-awd/src/assets"
+            ],
+            "styles": [
+              "projects/cft-inf-awd/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "cft-md-feedbackForm": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/cft-md-feedback-form",
+      "sourceRoot": "projects/cft-md-feedback-form/src",
+      "prefix": "cft-mdew",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/cft-md-feedback-form",
+            "index": "projects/cft-md-feedback-form/src/index.html",
+            "main": "projects/cft-md-feedback-form/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/cft-md-feedback-form/tsconfig.app.json",
+            "assets": [
+              "projects/cft-md-feedback-form/src/favicon.ico",
+              "projects/cft-md-feedback-form/src/assets"
+            ],
+            "styles": [
+              "projects/cft-md-feedback-form/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "20kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "projects/cft-md-feedback-form/src/environments/environment.ts",
+                  "with": "projects/cft-md-feedback-form/src/environments/environment.development.ts"
+                }
+              ]
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "cft-md-feedbackForm:build:production"
+            },
+            "development": {
+              "browserTarget": "cft-md-feedbackForm:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "cft-md-feedbackForm:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/cft-md-feedback-form/tsconfig.spec.json",
+            "assets": [
+              "projects/cft-md-feedback-form/src/favicon.ico",
+              "projects/cft-md-feedback-form/src/assets"
+            ],
+            "styles": [
+              "projects/cft-md-feedback-form/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "cft-md-feedbackForm2": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/cft-md-feedback-form",
+      "sourceRoot": "projects/cft-md-feedback-form/src",
+      "prefix": "cft-mdew",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/cft-md-feedback-form2",
+            "index": "projects/cft-md-feedback-form/src/index.html",
+            "main": "projects/cft-md-feedback-form/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/cft-md-feedback-form/tsconfig.app.json",
+            "assets": [
+              "projects/cft-md-feedback-form/src/favicon.ico",
+              "projects/cft-md-feedback-form/src/assets"
+            ],
+            "styles": [
+              "projects/cft-md-feedback-form/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "20kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "projects/cft-md-feedback-form/src/environments/environment.ts",
+                  "with": "projects/cft-md-feedback-form/src/environments/environment.development.ts"
+                }
+              ]
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "cft-md-feedbackForm:build:production"
+            },
+            "development": {
+              "browserTarget": "cft-md-feedbackForm:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "cft-md-feedbackForm:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/cft-md-feedback-form/tsconfig.spec.json",
+            "assets": [
+              "projects/cft-md-feedback-form/src/favicon.ico",
+              "projects/cft-md-feedback-form/src/assets"
+            ],
+            "styles": [
+              "projects/cft-md-feedback-form/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "cft-md-feedbackForm3": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/cft-md-feedback-form",
+      "sourceRoot": "projects/cft-md-feedback-form/src",
+      "prefix": "cft-mdew",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/cft-md-feedback-form3",
+            "index": "projects/cft-md-feedback-form/src/index.html",
+            "main": "projects/cft-md-feedback-form/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/cft-md-feedback-form/tsconfig.app.json",
+            "assets": [
+              "projects/cft-md-feedback-form/src/favicon.ico",
+              "projects/cft-md-feedback-form/src/assets"
+            ],
+            "styles": [
+              "projects/cft-md-feedback-form/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "20kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "projects/cft-md-feedback-form/src/environments/environment.ts",
+                  "with": "projects/cft-md-feedback-form/src/environments/environment.development.ts"
+                }
+              ]
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "cft-md-feedbackForm:build:production"
+            },
+            "development": {
+              "browserTarget": "cft-md-feedbackForm:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "cft-md-feedbackForm:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/cft-md-feedback-form/tsconfig.spec.json",
+            "assets": [
+              "projects/cft-md-feedback-form/src/favicon.ico",
+              "projects/cft-md-feedback-form/src/assets"
+            ],
+            "styles": [
+              "projects/cft-md-feedback-form/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "cft-md-feedbackForm4": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/cft-md-feedback-form",
+      "sourceRoot": "projects/cft-md-feedback-form/src",
+      "prefix": "cft-mdew",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/cft-md-feedback-form4",
+            "index": "projects/cft-md-feedback-form/src/index.html",
+            "main": "projects/cft-md-feedback-form/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/cft-md-feedback-form/tsconfig.app.json",
+            "assets": [
+              "projects/cft-md-feedback-form/src/favicon.ico",
+              "projects/cft-md-feedback-form/src/assets"
+            ],
+            "styles": [
+              "projects/cft-md-feedback-form/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "20kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "projects/cft-md-feedback-form/src/environments/environment.ts",
+                  "with": "projects/cft-md-feedback-form/src/environments/environment.development.ts"
+                }
+              ]
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "cft-md-feedbackForm:build:production"
+            },
+            "development": {
+              "browserTarget": "cft-md-feedbackForm:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "cft-md-feedbackForm:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/cft-md-feedback-form/tsconfig.spec.json",
+            "assets": [
+              "projects/cft-md-feedback-form/src/favicon.ico",
+              "projects/cft-md-feedback-form/src/assets"
+            ],
+            "styles": [
+              "projects/cft-md-feedback-form/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "cft-interactive-floor": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/cft-interactive-floor",
+      "sourceRoot": "projects/cft-interactive-floor/src",
+      "prefix": "cft-iw",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/cft-interactive-floor",
+            "index": "projects/cft-interactive-floor/src/index.html",
+            "main": "projects/cft-interactive-floor/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/cft-interactive-floor/tsconfig.app.json",
+            "assets": [
+              "projects/cft-interactive-floor/src/favicon.ico",
+              "projects/cft-interactive-floor/src/assets"
+            ],
+            "styles": [
+              "projects/cft-interactive-floor/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "cft-interactive-floor:build:production"
+            },
+            "development": {
+              "browserTarget": "cft-interactive-floor:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "cft-interactive-floor:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/cft-interactive-floor/tsconfig.spec.json",
+            "assets": [
+              "projects/cft-interactive-floor/src/favicon.ico",
+              "projects/cft-interactive-floor/src/assets"
+            ],
+            "styles": [
+              "projects/cft-interactive-floor/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  }
+}

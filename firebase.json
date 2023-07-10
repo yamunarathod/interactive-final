@@ -1,0 +1,39 @@
+{
+  "hosting": [{
+    "site":"feedbackform-7789b",
+    "public": "dist/cft-md-feedback-form",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  {
+    "site": "feedback-form2",
+    "public": "dist/cft-md-feedback-form2",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  {
+    "site": "feedback-form3",
+    "public": "dist/cft-md-feedback-form3",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  {
+    "site": "feedback-form4",
+    "public": "dist/cft-md-feedback-form4",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+]
+}

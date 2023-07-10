@@ -1,0 +1,88 @@
+<!-- <div class="w-screen h-screen flex-col items-center bg-black">
+
+
+    <div class="m-10 p-10">
+      <div class="text-white text-3xl pb-10 pt-10 font-sans font-bold gap-12">Dominate</div>
+    </div>
+
+    <div class="flex justify-between mb-4">
+      <ng-container class="text-white" *ngFor="let item of brands; let i = index">
+        <div>
+        <div class="mb-4 w-full py-2 px-3 flex w-50 justify-center items-center border-r-8" style="color: white; background-color: #8E1F1F; font-weight: 500; font-size: x-large;">
+          {{item.brandName | uppercase}}
+      </div>
+
+        <ng-container *ngFor="let product of item.product; let j = index">
+
+      <div [style]="{'background-color': product.color }" class="mb-4 w-full py-2 px-3 flex w-50 justify-center items-center border-r-8" (click)="selectProduct(i, j)" style="color: white; background-color: burlywood; font-weight: 500; font-size: x-large;">
+        {{product.productName | uppercase}}
+      </div>
+      </ng-container>
+
+    </div>
+  </ng-container>
+
+
+    </div>
+
+
+
+    <div class="flex items-center  content-center">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+        Next
+      </button>
+    </div>
+
+
+
+</div> -->
+
+
+<div class="h-full w-full flex justify-start flex-col items-center bg-black text-white">
+  <div class=" w-full mt-16 text-center">
+      <h1 class="text-[2rem] font-bold">{{flavours |  uppercase}}</h1>
+  </div>
+
+
+    <div class="flex justify-around w-full px-4 py-14">
+      <ng-container *ngFor="let item of brands; let i=index">
+      <div class=" w-[33%]">
+          <div class="flex flex-col mx-6  items-center">
+              <div class="mb-16 w-full text-center">
+                  <h3 [ngClass]="item.brandColor"
+                      class=" bg-gradient-to-r  py-3 px-4 rounded-lg text-[1.3rem] font-semibold">
+                      {{item.brandName | uppercase}}
+                      </h3>
+              </div>
+              <ng-container *ngFor="let product of item.product; let j= index">
+              <button [style]="{'background-color':product.color}" (click)="selectProduct(i, j)"
+                  class=" border-2 border-white w-full px-4 py-4 rounded-lg text-[1.2rem] mb-4">{{product.productName}}</button>
+              </ng-container>
+          </div>
+      </div>
+    </ng-container>
+  </div>
+
+
+  <div class="flex flex-col items-center w-3/4">
+    <form action="" #inputForm="ngForm" class="w-full">
+      <!-- {{inputForm.value | json}} -->
+    <div class="flex relative items-center rounded-lg w-full text-black" >
+
+        <input name="others" ngModel class="h-16 pr-11 pl-[8rem] w-full text-center text-black rounded-lg placeholder:font-semibold placeholder:text-lg" type="text"
+            placeholder="other flavour you like">
+        <h3
+            class=" text-white font-semibold absolute left-0 h-full px-4 pt-4 text-center bg-gradient-to-r from-blue-500 to-blue-600 rounded-l-lg">
+            Other Feedback
+        </h3>
+
+    </div>
+  </form>
+    <button (click)="submit(inputForm.value)"
+        class="mt-9 bg-gradient-to-r from-blue-600 to-violet-600 w-32 h-12 rounded-lg text-[1.3rem] outline-none transform active:scale-90 transition-transform">
+        Submit
+    </button>
+  </div>
+
+</div>
+
